@@ -9,41 +9,38 @@ $(document).ready(new function(){
         //var CONTEXT_PATH = $('#contextPathHolder').attr('data-contextPath');
         //alert("antes do ajax. " + CONTEXT_PATH );
         alert("antes do ajax. ");
+
         $.ajax({
             type: 'GET',
-            url: 'http://localhost:8080/SampleApp/home',
+            url: 'home',
             data: {
                 text: 'hello'
             },
             success: function(text) {
-                console.log('Sucesso: ' + JSON.stringify(text));
+                alert('Sucesso: ' + JSON.stringify(text));
                 console.log("nome: " + text.nome);
                 console.log("sobrenome: "+ text.sobrenome);
             },
             error: function(jqXHR) {
                 console.log('Error: ' + jqXHR.status);
             }
-        });        
-            /*
+        });
+
+        $.post("homePost", {"valor": "100"}, function(data, status){
+            alert("Data: " + JSON.stringify(data) + "\nStatus: " + status);
+        });
+        
+        /*
         $.ajax({
             type: "GET",
-            contextType: "application/json",
-            url: "http://localhost:8080/SampleApp/home",
+            url: "home",
         }).then(function (data, status, jqxhr) {
-            alert("oooiii");
-        });
-        &*/
-    });
-    /*
-            dataType: "json",
-            cache: false,
-            success: function(result){
-                alert(result);
-                $("#divResult").html(result);
-            },
-            error: function (e) {
-                alert("Deu erro " + e.responseText);                
+            alert("data: " + JSON.stringify(data));
+            alert("status: " + status);
+            if (jqxhr) {
+                alert("jqxhr: " + jqxhr.status);
             }
-
-    */
+        });
+        */
+    });
 });
