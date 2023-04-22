@@ -16,7 +16,7 @@ public class HomeController {
         HelloVO vo = new HelloVO();
         vo.setNome("Wagner");
         vo.setSobrenome("Barbosa");
-        System.out.println("Nome: "+ vo.getNome() + " " + vo.getSobrenome());
+        System.out.println("Nome: "+ vo.getNome() + " - " + vo.getSobrenome());
         return ResponseEntity.ok(vo);
     }
 
