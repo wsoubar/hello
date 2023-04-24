@@ -20,15 +20,7 @@ public class HomeController {
     @GetMapping("/home")
     public ResponseEntity<?> name() {
         HelloVO vo = randomHello();
-        // vo.setNome("Wagner");
-        // vo.setSobrenome("Barbosa");
         logger.debug(vo.toString());
-
-        logger.trace("A TRACE Message");
-        logger.debug("A DEBUG Message");
-        logger.info("An INFO Message");
-        logger.warn("A WARN Message");
-        logger.error("An ERROR Message");        
         return ResponseEntity.ok(vo);
     }
 

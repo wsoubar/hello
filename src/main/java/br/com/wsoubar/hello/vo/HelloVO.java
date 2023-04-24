@@ -21,8 +21,8 @@ public class HelloVO {
     @Override
     public String toString() {
         StringBuffer sb = new StringBuffer();
-        sb.append("Nome: "+ getNome() + "\n");
-        sb.append("Sobrenome: " + getSobrenome());
+        sb.append("*** Nome: "+ getNome()+ " * ");
+        sb.append("Sobrenome: " + getSobrenome()+ " ***");
         return sb.toString();
     }
 }
