@@ -18,4 +18,11 @@ public class HelloVO {
         this.sobrenome = sobrenome;
     }
     
+    @Override
+    public String toString() {
+        StringBuffer sb = new StringBuffer();
+        sb.append("Nome: "+ getNome() + "\n");
+        sb.append("Sobrenome: " + getSobrenome());
+        return sb.toString();
+    }
 }

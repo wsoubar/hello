@@ -1,10 +1,14 @@
 spring:
-    output:
-        ansi:
-            enabled: always
-    application:
-        name: "Sample App" 
+  output:
+    ansi:
+      enabled: always
+  application:
+    name: "Sample App" 
 server:
-    port: 8080
-    servlet:
-        context-path: /SampleApp
+  port: 8080
+  servlet:
+    context-path: /SampleApp
+logging:
+  level:
+    root: INFO
+    br.com.wsoubar: DEBUG
